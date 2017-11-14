@@ -20,7 +20,11 @@ class JsonCerealizerTests: XCTestCase {
         flower = Flower()
         flower.color = "red"
         flower.type = "rose"
-        flower.planted = Date(timeIntervalSince1970: 0)
+//        flower.planted = //Date(timeIntervalSince1970: 0)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        flower.planted = formatter.date(from: "1969-12-31 19:00:00")!
+        
         flower.petals = [ Petal(color: "Red"), Petal(color: "Pink"), Petal(color: "White") ]
 
         flowerJson = "{\"planted\":\"1969-12-31 19:00:00\",\"type\":\"rose\",\"petals\":[{\"color\":\"Red\"},{\"color\":\"Pink\"},{\"color\":\"White\"}],\"color\":\"red\"}"

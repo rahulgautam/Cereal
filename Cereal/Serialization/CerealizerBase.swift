@@ -71,7 +71,7 @@ open class CerealizerBase: NSObject, Cerealizer {
         return bag
     }
 
-    internal func serializeValue(_ value: AnyObject) -> AnyObject {
+    @objc internal func serializeValue(_ value: AnyObject) -> AnyObject {
         // handle straight return cases
         if (value is String || value is NSNumber) {
             return value
@@ -164,7 +164,7 @@ open class CerealizerBase: NSObject, Cerealizer {
         return nil
     }
 
-    internal func fillObject(_ obj: NSObject, data: Dictionary<String, AnyObject>) {
+    @objc internal func fillObject(_ obj: NSObject, data: Dictionary<String, AnyObject>) {
         let properties = CMTypeIntrospector(t: type(of: obj)).properties()
 
         for dataKey in data.keys {

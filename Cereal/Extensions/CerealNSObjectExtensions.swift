@@ -7,7 +7,7 @@ import Foundation
 import CoreMeta
 
 extension NSObject {
-    func toJson() -> String {
+    @objc func toJson() -> String {
         let cerializer:JsonCerealizer = JsonCerealizer.object()
         return cerializer.toString(self)
     }
@@ -17,7 +17,7 @@ extension NSObject {
         return cerializer.create(self, fromString: json) as! T
     }
 
-    func toPropertyBag() -> AnyObject {
+    @objc func toPropertyBag() -> AnyObject {
         let cerializer:JsonCerealizer = JsonCerealizer.object()
         return cerializer.toPropertyBag(self) as AnyObject
     }

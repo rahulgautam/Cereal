@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		498639621C19C4E100DBBF29 /* UnderscoreKeyTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498639611C19C4E100DBBF29 /* UnderscoreKeyTransform.swift */; };
 		4986396C1C19FFE800DBBF29 /* UnderscoreKeyTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498639611C19C4E100DBBF29 /* UnderscoreKeyTransform.swift */; };
-		8C299AF71D9DF0F000B9E45E /* CoreMeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C299AF21D9DF0D300B9E45E /* CoreMeta.framework */; };
 		8CE5F4E11BE40D140049E0C7 /* Cereal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE5F4E01BE40D140049E0C7 /* Cereal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CE5F4E81BE40D140049E0C7 /* Cereal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE5F4DD1BE40D140049E0C7 /* Cereal.framework */; };
 		8CE5F4ED1BE40D140049E0C7 /* JsonCerealizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE5F4EC1BE40D140049E0C7 /* JsonCerealizerTests.swift */; };
@@ -37,6 +36,7 @@
 		BAC28F4A5BF3D0634AF4BE96 /* CaseInsensitiveKeyTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC28C59727A92628E0E4EA5 /* CaseInsensitiveKeyTransform.swift */; };
 		BAC28FA648D7DE7B734DB952 /* JsonCerealizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC2886C78EF62B51CFB9816 /* JsonCerealizer.swift */; };
 		BAC28FAF2D99FFA4EA0991B1 /* CerealNSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC28B4DD6E2566F26008A41 /* CerealNSObjectExtensions.swift */; };
+		BB36B9F81FB9D3D100B0D6A5 /* CoreMeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C299AF21D9DF0D300B9E45E /* CoreMeta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,19 +54,19 @@
 			remoteGlobalIDString = 8CF3322B1BD14B8A0026564F;
 			remoteInfo = CoreMetaTests;
 		};
-		8C299AF51D9DF0EB00B9E45E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C299AEC1D9DF0D300B9E45E /* CoreMeta.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8CF2A9701BCF20D900FAA321;
-			remoteInfo = CoreMeta;
-		};
 		8CE5F4E91BE40D140049E0C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8CE5F4D41BE40D140049E0C7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8CE5F4DC1BE40D140049E0C7;
 			remoteInfo = Cereal;
+		};
+		BB838B201FB9C98000F9DEFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C299AEC1D9DF0D300B9E45E /* CoreMeta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CF2A9701BCF20D900FAA321;
+			remoteInfo = CoreMeta;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C299AF71D9DF0F000B9E45E /* CoreMeta.framework in Frameworks */,
+				BB36B9F81FB9D3D100B0D6A5 /* CoreMeta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +130,7 @@
 				8CE5F4DF1BE40D140049E0C7 /* Cereal */,
 				8CE5F4EB1BE40D140049E0C7 /* CerealTests */,
 				8CE5F4DE1BE40D140049E0C7 /* Products */,
+				BB838B221FB9C99100F9DEFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +223,13 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		BB838B221FB9C99100F9DEFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -248,7 +256,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8C299AF61D9DF0EB00B9E45E /* PBXTargetDependency */,
+				BB838B211FB9C98000F9DEFE /* PBXTargetDependency */,
 			);
 			name = Cereal;
 			productName = Cereal;
@@ -285,11 +293,11 @@
 				TargetAttributes = {
 					8CE5F4DC1BE40D140049E0C7 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 					};
 					8CE5F4E61BE40D140049E0C7 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 					};
 				};
 			};
@@ -396,15 +404,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8C299AF61D9DF0EB00B9E45E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CoreMeta;
-			targetProxy = 8C299AF51D9DF0EB00B9E45E /* PBXContainerItemProxy */;
-		};
 		8CE5F4EA1BE40D140049E0C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8CE5F4DC1BE40D140049E0C7 /* Cereal */;
 			targetProxy = 8CE5F4E91BE40D140049E0C7 /* PBXContainerItemProxy */;
+		};
+		BB838B211FB9C98000F9DEFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoreMeta;
+			targetProxy = BB838B201FB9C98000F9DEFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -453,6 +461,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -496,6 +506,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,7 +535,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -546,7 +559,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -561,7 +575,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -576,7 +591,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -624,6 +640,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -649,7 +667,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Debug-QA";
 		};
@@ -664,7 +683,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Debug-QA";
 		};
@@ -712,6 +732,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -737,7 +759,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Debug-Production";
 		};
@@ -752,7 +775,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Debug-Production";
 		};
@@ -800,6 +824,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -825,7 +851,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Debug-Staging";
 		};
@@ -840,7 +867,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Debug-Staging";
 		};
@@ -881,6 +909,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -907,7 +937,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Release-QA";
 		};
@@ -922,7 +953,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Release-QA";
 		};
@@ -963,6 +995,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -989,7 +1023,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Release-Staging";
 		};
@@ -1004,7 +1039,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Release-Staging";
 		};
@@ -1045,6 +1081,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1071,7 +1109,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.Cereal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Release-Production";
 		};
@@ -1086,7 +1125,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truefit.CerealTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = "Release-Production";
 		};
