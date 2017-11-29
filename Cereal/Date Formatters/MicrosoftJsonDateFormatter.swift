@@ -7,14 +7,15 @@ import Foundation
 
 open class MicrosoftJsonDateFormatter: DateFormatter {
     open override func date(from string:String) -> Date? {
-        if (string.characters.count == 0) {
+        if (string.count == 0) {
             return nil
         }
 
         // Remove escape characters and the Date() text from the raw JSON date string.
         let startIndex = string.range(of: "(")!.lowerBound
         let endIndex = string.range(of: ")")!.lowerBound
-        var datePart = string.substring(with: (startIndex ..< endIndex))
+        
+        var datePart = String(string[startIndex..<endIndex])
 
         // Determine if the UTC portion is present and extract it and the direction.
         let plusRange = datePart.range(of: "+")
@@ -34,15 +35,15 @@ open class MicrosoftJsonDateFormatter: DateFormatter {
             let hoursEnd = string.index(range.lowerBound, offsetBy: 3)
             let hoursRange = hoursStart ..< hoursEnd;
             
-            timeZoneHoursPart = datePart.substring(with: hoursRange)
+            timeZoneHoursPart = String(datePart[hoursRange])
             
             let minutesStart = string.index(range.lowerBound, offsetBy: 3)
             let minutesEnd = string.index(range.lowerBound, offsetBy: 5)
             let minutesRange = minutesStart ..< minutesEnd;
             
-            timeZoneMinutesPart = datePart.substring(with: minutesRange)
+            timeZoneMinutesPart = String(datePart[minutesRange])
             
-            datePart = datePart.substring(to: range.lowerBound)
+            datePart = String(datePart[..<range.lowerBound])
         }
 
         // Convert the parts.

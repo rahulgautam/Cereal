@@ -13,7 +13,7 @@ open class UnderscoreKeyTransform: CerealKeyTransform {
     public init() {}
     
     open func transformKey(_ string: String) -> String {
-        return string.characters.map(prefixUppercaseWithUnderscore).joined(separator: "")
+        return string.map(prefixUppercaseWithUnderscore).joined(separator: "")
     }
     
     open func propertyName(_ properties: [CMPropertyInfo], forKey: String) -> String? {

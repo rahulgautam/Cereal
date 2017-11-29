@@ -11,9 +11,8 @@ open class PascalCaseKeyTransform: CerealKeyTransform {
     public init() {}
     
     open func transformKey(_ string: String) -> String {
-        let index = string.characters.index(string.startIndex, offsetBy: 1)
-        
-        return string.substring(to: index).uppercased() + string.substring(from: index)
+        let index = string.index(string.startIndex, offsetBy: 1)
+        return String(string[..<index]).uppercased() + String(string[index...])
     }
 
     open func propertyName(_ properties: Array<CMPropertyInfo>, forKey: String) -> String? {
